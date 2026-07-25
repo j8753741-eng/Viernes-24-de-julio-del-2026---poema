@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cuando las Estrellas Aprendieron Tu Nombre</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:
+radial-gradient(circle at top,#263a66 0%,#101727 35%,#06080f 75%,#020204 100%);
+color:#f6f2eb;
+font-family:'Cormorant Garamond',serif;
+overflow-x:hidden;
+position:relative;
+}
+
+/* Fondo */
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle,#ffffffcc 1px,transparent 1.6px);
+background-size:150px 150px;
+opacity:.25;
+animation:stars 140s linear infinite;
+pointer-events:none;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:900px;
+height:900px;
+border-radius:50%;
+left:50%;
+top:-500px;
+transform:translateX(-50%);
+background:radial-gradient(circle,
+rgba(255,235,190,.24),
+rgba(255,235,190,.10),
+transparent 70%);
+filter:blur(18px);
+pointer-events:none;
+}
+
+@keyframes stars{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(150px);
+}
+}
+
+.container{
+width:min(930px,92%);
+margin:auto;
+padding:70px 0 90px;
+position:relative;
+z-index:2;
+}
+
+/* Encabezado */
+
+.hero{
+
+text-align:center;
+margin-bottom:80px;
+position:relative;
+}
+
+.star{
+font-size:2.6rem;
+color:#ffe5a4;
+animation:shine 4s ease-in-out infinite;
+margin-bottom:20px;
+display:block;
+}
+
+@keyframes shine{
+
+0%,100%{
+opacity:.45;
+transform:scale(.9);
+}
+
+50%{
+opacity:1;
+transform:scale(1.15);
+}
+
+}
+
+.title{
+font-family:'Cinzel',serif;
+font-size:2.25rem;
+line-height:1.6;
+letter-spacing:2px;
+color:#fff8df;
+text-transform:uppercase;
+text-shadow:
+0 0 12px rgba(255,233,170,.25);
+}
+
+.subtitle{
+
+margin-top:22px;
+font-size:1.2rem;
+letter-spacing:3px;
+color:#ead9b3;
+}
+
+.nickname{
+
+margin-top:34px;
+display:inline-block;
+padding:16px 32px;
+border:1px solid rgba(255,233,175,.4);
+border-radius:50px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(12px);
+font-size:1.55rem;
+color:#fff6da;
+}
+
+/* Línea */
+
+.separator{
+
+display:flex;
+align-items:center;
+justify-content:center;
+gap:16px;
+margin:60px auto;
+}
+
+.separator span{
+
+width:120px;
+height:1px;
+background:linear-gradient(to right,
+transparent,
+#ffe4a4,
+transparent);
+}
+
+.separator i{
+
+font-style:normal;
+color:#ffe4a4;
+font-size:1.1rem;
+}
+
+/* Bloques */
+
+.verse{
+
+position:relative;
+margin:55px 0;
+padding:38px;
+border-radius:28px;
+
+background:
+linear-gradient(145deg,
+rgba(255,255,255,.07),
+rgba(255,255,255,.03));
+
+border:1px solid rgba(255,239,197,.13);
+
+backdrop-filter:blur(18px);
+
+box-shadow:
+0 0 35px rgba(0,0,0,.28);
+}
+
+.verse::before{
+
+content:"✦";
+position:absolute;
+top:-15px;
+left:32px;
+
+font-size:1.2rem;
+color:#ffe3a2;
+background:#0a0d17;
+padding:4px 10px;
+border-radius:20px;
+}
+
+.verse p{
+
+font-size:1.55rem;
+line-height:2.15;
+text-align:center;
+margin-bottom:26px;
+}
+
+.emphasis{
+
+display:block;
+font-size:2rem;
+font-weight:600;
+color:#fff1c7;
+margin:22px 0;
+text-align:center;
+}
+
+.small-space{
+height:12px;
+}
+
+.constellation{
+
+display:flex;
+justify-content:center;
+gap:14px;
+margin:45px 0;
+color:#ffe4aa;
+font-size:1rem;
+letter-spacing:8px;
+}
+
+.fade{
+
+opacity:.9;
+}
+
+/* Adaptación */
+
+@media(max-width:768px){
+
+.container{
+padding:45px 0 70px;
+}
+
+.title{
+font-size:1.45rem;
+line-height:1.8;
+}
+
+.subtitle{
+font-size:1rem;
+letter-spacing:2px;
+}
+
+.nickname{
+font-size:1.2rem;
+padding:14px 24px;
+}
+
+.verse{
+padding:28px;
+}
+
+.verse p{
+font-size:1.33rem;
+line-height:2;
+}
+
+.emphasis{
+font-size:1.7rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="hero">
+
+<span class="star">✦</span>
+
+<h1 class="title">
+CUANDO LAS ESTRELLAS APRENDIERON TU NOMBRE,<br>
+EL UNIVERSO COMPRENDIÓ QUE EL AMOR TENÍA ROSTRO
+</h1>
+
+<p class="subtitle">
+Viernes, 24 de julio del 2026 — Noche
+</p>
+
+<div class="nickname">
+Mi Eclipse de Todos los Cielos
+</div>
+
+</header>
+
+<div class="separator">
+<span></span>
+<i>✧</i>
+<span></span>
+</div>
+
+<section class="verse">
+
+<p>
+
+Hay noches que nacen para existir...
+y hay otras que nacen únicamente para recordarme
+que tú eres el milagro más hermoso
+que ha tocado mi vida.
+
+</p>
+
+<span class="emphasis">
+Esta es una de ellas.
+</span>
+
+<p>
+
+Mientras el cielo va apagando lentamente
+los colores del día
+y las estrellas comienzan a ocupar su lugar,
+
+yo descubro que ninguna de ellas
+puede competir con la luz que llevas dentro.
+
+</p>
+
+<p>
+
+Porque desde que llegaste a mi corazón,
+
+entendí que la belleza
+no vive en el firmamento...
+
+vive en tus ojos,
+
+en tu sonrisa,
+
+en tu manera de existir,
+
+y en la forma tan perfecta
+en la que haces latir mi alma.
+
+</p>
+
+</section>
+
+<div class="constellation">
+✦ ✧ ✦ ✧ ✦
+</div>
+
+<section class="verse fade">
+
+<p>
+
+Si alguien me preguntara
+qué significa amar,
+
+no buscaría un diccionario,
+
+ni intentaría inventar
+una respuesta complicada.
+
+</p>
+
+<span class="emphasis">
+
+Simplemente pronunciaría tu nombre.
+
+</span>
+
+<p>
+
+Porque tú eres
+mi definición favorita del amor.
+
+</p>
+
+<p>
+
+Eres el lugar
+donde descansan mis miedos.
+
+</p>
+
+<p>
+
+Eres el motivo
+por el que mis días tienen sentido.
+
+</p>
+
+<p>
+
+Eres el sueño
+del que jamás quisiera despertar.
+
+</p>
+
+<p>
+
+Y esta noche,
+mientras el mundo continúa girando
+como si nada extraordinario ocurriera,
+
+yo siento que el universo entero
+se ha detenido
+
+únicamente para permitirme
+pensar en ti
+una vez más.
+
+</p>
+
+  </section>
+
+<div class="separator">
+<span></span>
+<i>✦</i>
+<span></span>
+</div>
+
+<section class="verse">
+
+<p>
+
+A veces me pregunto
+cuántas vidas habría necesitado recorrer
+para encontrar un corazón como el tuyo.
+
+</p>
+
+<span class="emphasis">
+
+Creo que infinitas.
+
+</span>
+
+<p>
+
+Porque personas existen muchas...
+
+</p>
+
+<p>
+
+Pero alguien capaz
+de hacerme sentir amado
+con una sola mirada...
+
+</p>
+
+<span class="emphasis">
+
+Solamente tú.
+
+</span>
+
+<p>
+
+Alguien que logre convertir
+un abrazo
+en un hogar...
+
+</p>
+
+<span class="emphasis">
+
+Solamente tú.
+
+</span>
+
+<p>
+
+Alguien capaz de hacer
+que incluso la distancia
+se rinda ante la fuerza del amor...
+
+</p>
+
+<span class="emphasis">
+
+Solamente tú.
+
+</span>
+
+</section>
+
+<div class="constellation">
+✧ ✦ ✧ ✦ ✧
+</div>
+
+<section class="verse">
+
+<p>
+
+Y entonces comprendo
+que fui inmensamente afortunado
+cuando nuestros caminos
+decidieron cruzarse.
+
+</p>
+
+<p>
+
+No quiero un amor
+que dure solamente
+cuando todo sea sencillo.
+
+</p>
+
+<span class="emphasis">
+
+Quiero el nuestro.
+
+</span>
+
+<p>
+
+Ese que permanece
+incluso cuando la nostalgia pesa.
+
+</p>
+
+<p>
+
+Ese que aprende a esperar.
+
+</p>
+
+<p>
+
+Ese que sabe abrazarse
+aun cuando los kilómetros
+intentan separarnos.
+
+</p>
+
+<p>
+
+Ese que sigue creciendo
+mientras pasan los días.
+
+</p>
+
+<p>
+
+Porque lo nuestro
+no necesita perfección
+para ser eterno.
+
+</p>
+
+<span class="emphasis">
+
+Solo necesita
+que sigamos eligiéndonos
+cada mañana
+y cada noche.
+
+</span>
+
+</section>
+
+<div class="separator">
+<span></span>
+<i>✧</i>
+<span></span>
+</div>
+
+<section class="verse fade">
+
+<p>
+
+Quiero seguir descubriendo
+cada pequeño detalle de ti.
+
+</p>
+
+<p>
+
+Seguir aprendiendo
+el idioma secreto
+de tus silencios.
+
+</p>
+
+<p>
+
+Seguir siendo quien celebre
+tus alegrías,
+
+y también quien sostenga tu mano
+cuando lleguen las tormentas.
+
+</p>
+
+<p>
+
+Quiero que cada uno
+de tus sueños
+
+encuentre siempre
+un lugar seguro
+en mi corazón.
+
+</p>
+
+<p>
+
+Y prometo protegerlos
+como si fueran también
+los míos.
+
+</p>
+
+<p>
+
+Porque desde que te amo
+
+ya no puedo imaginar
+un futuro
+donde tú no estés.
+
+</p>
+
+</section>
+
+<div class="constellation">
+✦ ✦ ✧ ✦ ✦
+</div>
+
+<section class="verse">
+
+<p>
+
+Todos mis mañanas
+llevan tu nombre.
+
+</p>
+
+<p>
+
+Todos mis anhelos
+tienen tu sonrisa.
+
+</p>
+
+<p>
+
+Todos mis planes
+comienzan contigo.
+
+</p>
+
+<p>
+
+Y cada esperanza
+termina abrazando la idea
+
+de seguir caminando
+a tu lado.
+
+</p>
+
+<p>
+
+Esta noche quiero confesarte
+algo que probablemente
+
+el universo
+ya sabía antes que yo.
+
+</p>
+
+<span class="emphasis">
+
+Cada día te amo más.
+
+</span>
+
+<p>
+
+No un poco más.
+
+</p>
+
+<p>
+
+No apenas
+un poco diferente.
+
+</p>
+
+<p>
+
+Muchísimo más.
+
+</p>
+
+<p>
+
+Como si mi corazón
+encontrara una nueva manera
+de crecer
+
+cada vez
+que piensa en ti.
+
+</p>
+
+</section>
+
+<div class="separator">
+<span></span>
+<i>✦</i>
+<span></span>
+</div>
+
+<section class="verse">
+
+<p>
+
+Es un amor
+que no conoce límites.
+
+</p>
+
+<p>
+
+Que no entiende
+de medidas.
+
+</p>
+
+<p>
+
+Que jamás se cansa
+de pronunciar tu nombre
+en silencio.
+
+</p>
+
+<p>
+
+Que encuentra paz
+simplemente imaginando
+tu felicidad.
+
+</p>
+
+<p>
+
+Y si algún día
+las estrellas
+dejaran de brillar...
+
+</p>
+
+<p>
+
+Si la luna
+olvidara salir...
+
+</p>
+
+<p>
+
+Si el tiempo
+decidiera detener
+todos los relojes...
+
+</p>
+
+<span class="emphasis">
+
+Mi amor
+seguiría buscándote.
+
+</span>
+
+<p>
+
+Porque no depende
+del cielo.
+
+</p>
+
+<p>
+
+No depende
+del destino.
+
+</p>
+
+<p>
+
+No depende
+de la suerte.
+
+</p>
+
+<p>
+
+Depende únicamente
+de la promesa
+que mi alma hizo
+
+el día
+en que decidió
+convertirte
+
+en su lugar favorito
+para siempre.
+
+</p>
+
+</section>
+
+<div class="constellation">
+✧ ✦ ✧ ✦ ✧
+</div>
+
+<section class="verse fade">
+
+<p>
+
+Gracias por existir.
+
+</p>
+
+<p>
+
+Gracias por regalarme
+la fortuna
+de poder llamarte
+mi novia.
+
+</p>
+
+<p>
+
+Gracias por enseñarme
+que el verdadero amor
+no hace ruido...
+
+</p>
+
+<span class="emphasis">
+
+Hace hogar.
+
+</span>
+
+<p>
+
+Y mientras exista
+una sola noche más
+para contemplar el cielo,
+
+habrá un corazón
+aquí abajo
+
+pronunciando tu nombre
+
+con la misma intensidad
+del primer día,
+
+pero con un amor
+infinitamente más grande.
+
+</p>
+
+</section>
+
+<div class="separator">
+<span></span>
+<i>❤</i>
+<span></span>
+</div>
+
+<section class="verse">
+
+<p>
+
+Porque tú,
+
+mi Eclipse de Todos los Cielos,
+
+no eres solamente
+la mujer que amo.
+
+</p>
+
+<p>
+
+Eres la casualidad
+más hermosa
+que Dios escribió
+para mi vida.
+
+</p>
+
+<p>
+
+Eres el latido
+que convirtió
+mi existencia
+en poesía.
+
+</p>
+
+<p>
+
+Eres mi presente favorito.
+
+</p>
+
+<p>
+
+Mi esperanza
+más bonita.
+
+</p>
+
+<p>
+
+Mi infinito.
+
+</p>
+
+<span class="emphasis">
+
+Y el amor
+
+que elegiría
+
+una
+
+y mil eternidades más.
+
+❤️
+
+</span>
+
+</section>
+
+<footer style="margin-top:90px;text-align:center;opacity:.85;">
+
+<div style="font-family:'Cinzel',serif;font-size:1.25rem;letter-spacing:4px;color:#fff0c5;">
+✦ SI EL UNIVERSO VOLVIERA A NACER, VOLVERÍA A ENCONTRARTE ✦
+</div>
+
+<div style="margin-top:20px;font-size:1.05rem;color:#d9cfb4;letter-spacing:2px;">
+Con todo el amor que cabe en mi corazón...
+y con todo el infinito que aún queda por amarte.
+</div>
+
+<div style="margin-top:35px;font-size:1.6rem;color:#ffe4a8;">
+✧ ❤ ✧
+</div>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>
